@@ -1,0 +1,689 @@
+/*头部*/
+body{
+	background: #e0e0b1;
+}
+.head{
+	position: relative;
+	width: 1280px;
+	height: 450px;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+
+}
+.jjfb{
+	text-align: center;
+}
+.hahah{
+	font-size: 18px;font-weight: 800;
+	font-family: "microsoft yahei";
+	text-align: justify;
+}
+.logo{
+	z-index: 2;
+	position: absolute;
+	left: 10%;
+}
+.fire{
+	position: relative;
+	z-index: 2;
+}
+.fire1{
+	position: fixed;
+	left: 12%;
+	transform: scale(0.5);
+}
+.fire2{
+	position: fixed;
+	right: 12%;
+	transform: scale(0.5);
+}
+.headbg{
+	top: 0px;
+	position: absolute;
+	left: 50%;
+	margin-left: -640px;
+	z-index: 1;
+	transition: 0.5s all;
+}
+.headbg:hover{
+	transform: scale(1.05);
+}
+.headNav{
+	width:100%; 
+	
+	
+	z-index: 2;
+	position: absolute;
+	
+	
+}
+.firstNav{
+	width: 1280px;
+	height: 90px;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	background: rgba(0,0,0,0.5);
+	
+	box-shadow: 0 50px 200px;
+
+	
+}
+.firstNav>li{
+	text-align: center;
+	position: relative;
+	
+	
+}
+.firstNav>li>a{
+	color:#fff ;
+	font-size: 20px;
+	
+	line-height: 90px;
+	display: block;
+	
+	padding-right: 15px;
+	padding-left: 15px;
+	transition: 0.3s all;
+	letter-spacing: 1px;
+}
+.firstNav>li:hover>a{
+	color: #fc0;
+	
+}
+.secondNav{
+	position: absolute;
+	width: 110px;
+	display: none
+}
+.secondNav>li>a{
+	color: #fff;	
+	line-height: 60px;
+	display: block;
+	background: rgba(0,0,0,0.3);
+	transition: 0.3s all;
+	font-size: 16px;
+	letter-spacing: 1px;
+	
+}
+.secondNav>li>a:hover{
+	color: #fc0;
+	background: rgba(0,0,0,0.5);
+}
+.secondNav.show{
+	display: block;
+	
+}
+.secondNav.show>li:nth-child(1){
+	animation: showMenu 0.5s both;
+}
+.secondNav.show>li:nth-child(2){
+	animation: showMenu2 0.5s 0.2s both;
+}
+.secondNav.show>li:nth-child(3){
+	animation: showMenu 0.5s 0.4s both;
+}
+.secondNav.show>li:nth-child(4){
+	animation: showMenu2 0.5s 0.6s both;
+}
+.secondNav.show>li:nth-child(5){
+	animation: showMenu 0.5s 0.8s both;
+}
+.secondNav.show>li:nth-child(6){
+	animation: showMenu2 0.5s 1s both;
+}
+@keyframes showMenu{
+	0%{
+		opacity: 0;
+		transform: translateX(140px) translateY(0)  scale(0,0);
+		
+	}
+	70%{
+		opacity: 0.7;
+		transform: translateX(-70px) translateY(0)  scale(0.7,0.7);
+		
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0) translateY(0) scale(1,1);
+	}
+}
+@keyframes showMenu2{
+	0%{
+		opacity: 0;
+		transform: translateX(-140px) translateY(0) scale(0,0);
+		
+	}
+	70%{
+		opacity: 0.7;
+		transform: translateX(70px) translateY(0)  scale(0.7,0.7);
+		
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0) translateY(0) scale(1,1);
+	}
+}
+/*头部 end
+/*主体*/
+/*轮播*/
+.main1{
+	width: 1000px;
+	
+	background: ##e0e0b1;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+}
+.loopread{
+	
+	background: #fff;
+	
+	position: relative;
+}
+.loopread,
+.loopUl>li
+.loopUl>li>a{
+	overflow: hidden;
+	width: 580px;
+	height: 350px;
+	
+}
+.loopUl>li>a{
+	display: block;
+	transition: 0.5s all;
+}
+.loopUl>li>a:hover{
+	transform: scale(1.05);
+}
+.loopUl>li{
+	top: 0;
+	left: 0;
+	position: absolute;
+	display: none;
+}
+.loopUl>li.show{
+	display: block;
+}
+.dots{
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}
+.dots span{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: #FFFFFF;
+	margin-left: 10px;
+	cursor: pointer;
+	transition: 0.3s all;
+}
+.dots span.on{
+	background: #f90;
+	transform: scaleX(1.5);
+}
+
+@keyframes showAni {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes hideAni {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/*轮播 end */
+/*新闻列表*/
+.newList{
+	width: 419px;
+	height: 350px;
+	background: #f8ece2;
+	position: relative;
+	top: -350px;
+	left: 581px;
+}
+.newHead{
+	width: 397px;
+	height: 60px;
+	display: flex;
+	
+	margin-left: 22px;
+	text-align: center;
+	border-bottom: solid 1px #333;
+	
+}
+.newHead>li{
+	width: 75px;
+	position: relative;
+	padding: 25px 0 17px 0;
+	
+}
+.newHead>li>a{
+	display: block;
+	font-family: "microsoft yahei";
+	font-weight: 2000;
+	color: #333;
+	transition: 0.3s all;
+	height: 35px;
+}
+.newHead>li>a:hover{
+	color: #f00;
+	background: #d9ccc0;
+	border-bottom:solid #f00 1px ;
+}
+.newBd{
+	width: 400px;
+	height: 280px;
+	background: #f8ece2;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+}
+.newTitle{
+	margin-left: 20px;
+}
+.newTitle>li{
+	position: relative;
+	line-height: 35px;
+	padding-top: 5px;
+}
+.newTitle>li>a{
+	color: #888;
+	line-height: 35px;
+	display: block;
+	
+	white-space: nowrap;
+	
+}
+.listIcon{
+		padding-right: 10px;
+		line-height: 35px;
+	
+}
+.newTitle>li>a:hover{
+	color: #f00;
+	
+}
+.newTitle>li>{
+	
+}
+
+/*新闻列表 end*/
+/*漫画区*/
+.manga{
+	width: 580px;
+	height: 350px;
+	background: #d9ccc0;
+	position: relative;
+	margin-top: -330px;
+}
+.mangaUl{
+	width: 397px;
+	height: 60px;
+	display: flex;
+	
+	margin-left: 22px;
+	text-align: center;
+	border-bottom: solid 1px #333;
+}
+.mangaPic{
+	height:350px;
+	width: 419px;
+	left: 581px;
+	background: #d9ccc0;;
+	position: relative;
+	margin-top: -350px;
+}
+.mangaUl>li{
+	width: 100px ;
+	position: relative;
+	padding: 25px 20px 17px 0;
+	font-size: 20px;
+	
+}
+.mangaUl>li>a{
+	display: block;
+	font-family: "microsoft yahei";
+	font-weight: 2000;
+	color: #333;
+	transition: 0.3s all;
+	height: 35px;
+	
+}
+.mangaUl>li>a:hover{
+	color: #f00;
+	background: rgba(248,236,226,1);
+	border-bottom:solid #f00 1px ;
+}
+.mangaBd{
+	width: 560px;
+	height: 280px;
+	background: #d9ccc0;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+}
+.mangaTitle{
+	margin-left: 20px;
+}
+.mangaTitle>li{
+	position: relative;
+	line-height: 35px;
+	padding-top: 5px;
+}
+.mangaTitle>li>a{
+	color: #888;
+	line-height: 35px;
+	display: block;
+	
+	white-space: nowrap;
+	
+}
+.mangaTitle>li>a:hover{
+	color: #f00;
+	
+}
+.mangaPicBd{
+	width: 400px;
+	height: 280px;
+	background: #f8ece2;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+	overflow: hidden;
+	position: relative;
+}
+.mangaPicUl{
+	height: 280px;
+	width: 400px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+}
+
+.mangaPicUl>li{
+	
+}
+.mangaPicUl>li>a{
+	overflow: hidden;
+	width: 419px;
+	height: 280px;
+	
+}
+.mangaPicUl>li>a{
+	display: block;
+	transition: 0.5s all;
+}
+.mangaPicUl>li>a:hover{
+	transform: scale(1.05);
+}
+.mangaPicUl>li{
+	overflow: hidden;
+	position:absolute;
+	
+}
+.mangaPicUl>li.show{
+	display: block;
+}
+.lunboDian{
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}
+.lunboDian span{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: #FFFFFF;
+	margin-left: 10px;
+	cursor: pointer;
+	transition: 0.3s all;
+	border-radius:20px ;
+}
+.lunboDian span.on{
+	background: #f90;
+	
+	width: 30px;
+}
+.pic{
+	width: 400px;
+	height: 280px;
+	cursor: pointer;
+	display: block;
+	transition: 0.5s both;
+}
+.pic:hover{
+	transform: scale(1.05);
+	background: rgba(0,0,0,0.2);
+}
+.yansheng{
+	width: 1000px;
+	height: 350px;
+	background: #f8ece2;
+	margin-top: 20px;
+}
+.yanshengUl{
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+}
+.yanshengUl>li{
+	position: relative;
+	width: 200px;
+	text-align: center;
+	top: 40px;
+	margin-left: 40px;
+	word-wrap:break-word; 
+	word-break:break-all; 
+	overflow: hidden;   
+	
+	height: 200px;
+	
+}
+.yanshengUl>li>a{
+	color: #888;
+	font-size: 16px;
+	
+	overflow: hidden;
+}
+.yanshengUl>li>a>img{
+	height: 200px;
+	width: 200px;
+	overflow: hidden;
+	transition: 0.5s all;
+}
+.yanshengUl>li>a>img:hover{
+	transform: scale(1.1);
+	box-shadow:  0px 0px 50px #333333 inset;
+	z-index: 3;
+}
+.yanshengUl>li>a:hover{
+	
+}
+.wenzi{
+	display: flex;
+}
+.wenzi>li{
+	position: relative;
+	width: 200px;
+	text-align: center;
+	margin-top: 50px;
+	margin-left: 40px;
+	word-wrap:break-word; 
+	word-break:break-all; 
+	overflow: hidden;   
+}
+.wenzi>li>a{
+	color: #888888;
+	transition: 0.1s all;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+.wenzi>li>a:hover{
+	color: #FF0000;
+}
+.shuqian{
+	width: 1000px;
+	height: 350px;
+	background: #d9ccc0;
+	margin-top: 20px;
+	
+}
+
+.shuqianTou>li{
+	width: 100px;
+	position: relative;
+	padding: 14px 0 0 0;
+	margin-left: 22px;
+	text-align: center;
+	border-bottom: solid 1px #333;
+}
+.shuqianTou>li>a{
+	display: block;
+	font-family: "microsoft yahei";
+	font-weight: 2000;
+	color: #333;
+	transition: 0.3s all;
+	height: 35px;
+	font-size: 20px;
+}
+.shuqianTou>li>a:hover{
+	color: #f00;
+	background: #f8ece2;
+	
+}
+.shuqianUl{
+	display: flex;
+	margin-left: 20px;
+	margin-right: 20px;
+	text-align: center;
+	top: 50px;
+	position: relative;
+	height: 300px;
+}
+.shuqianUl>li{
+	width: 160px;
+	position: relative;
+	
+}
+.shuqianUl>li>a{
+	display: block;
+	line-height: 200px;
+	
+	
+}
+.shuqianUl>li>a>img{
+	cursor: pointer;
+	overflow: hidden;
+	transition: 0.3s all;
+	
+	
+}
+.shuqianUl>li:nth-child(2n-1)>a>img:hover{
+	transform: scale(1.1);
+	background: rgba(255,255,255,0.5);
+	box-shadow: #111 5px 5px 10px;
+	border-bottom: solid 2px   #fff;
+	border-top: solid 2px   #fff;
+	animation: shuqian 1s both;
+}
+.shuqianUl>li:nth-child(2n)>a>img:hover{
+	transform: scale(1.1);
+	background: rgba(255,255,255,0.5);
+	box-shadow: #111 5px 5px 10px;
+	border-bottom: solid 2px   #fff;
+	border-top: solid 2px   #fff;
+	animation: shuqian2 1s both;
+}
+@keyframes shuqian{
+	0%{
+		opacity: 1;
+		transform: translateY(0) rotateZ(0deg) ;
+	}
+	70%{
+		opacity: 1;
+		transform: translateY(-40px) rotateZ(-5deg)  ;
+	}
+	100%{
+		opacity: 1;
+		transform:  translateY(-30px) rotateZ(3deg) ;
+	}
+}
+@keyframes shuqian2{
+	0%{
+		opacity: 1;
+		transform: translateY(0) rotateZ(0deg) ;
+	}
+	70%{
+		opacity: 1;
+		transform: translateY(-40px) rotateZ(5deg)  ;
+	}
+	100%{
+		opacity: 1;
+		transform:  translateY(-30px) rotateZ(-3deg) ;
+	}
+}
+/*漫画区 end*/
+.lihui{
+	position: relative;
+	top: -650px;
+}
+.lihuizz{
+	position: absolute;
+	right: 0%;
+	z-index: -1;
+}
+.lihuimr{
+	position: absolute;
+	left: 0%;
+	top: -500px;
+	left: 100px;
+}
+.lihuizz2{
+	position: absolute;
+	right: 0%;
+	top: -840px;
+}
+/*主体 end */
+.weibu{
+	width: 100%;
+	height: 180px;
+	background: #b18d41;
+	margin-top: 20px;
+	position: relative;
+}
+.jiewei>li{
+	margin-left: 50%;
+	left: -500px;
+	position: absolute;
+	margin-top: 20px;
+}
+.lianxi{
+	
+	
+	position: relative;
+	margin-top: 20px;
+	
+}
+.lianxi>li{
+	padding-left: 460px;
+	width: 300px;
+	line-height: 20px;
+	top: 20px;
+	position: relative;
+	overflow: hidden;   
+	
+}
+.lianxi>li>a{
+	
+	color: #fff;
+}
